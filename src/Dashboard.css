@@ -1,0 +1,303 @@
+/*
+Dashboard's styles
+*/
+html {
+    height: 100%
+}
+body {
+    height: 100%;
+}
+#root {
+    height: 100%;
+}
+.Dashboard {
+    /*inside border*/
+    /*variant*/background-color: #FFFFFF;
+    /*variant*/padding: 1em;
+
+    /*font attributes*/
+    /*variant*/font-size : 12px;
+    /*variant*/color: black;/*font color*/
+    /*variant*/font-family: Artifakt Element !important;
+        
+    height: 100%;/*tag html, tag body, id root, to make the root div extends to whole page.*/
+    box-sizing: border-box;
+    cursor: default;
+    display: block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/*
+Dashboard head's styles
+*/
+.dashboard-title {
+    font-size: 3em;
+    font-weight: 900;
+    color: #3C3C3C;
+}
+.dashboard-scanning-dates-description {
+    font-size: 1.5em;
+    color: #B2B2B2;
+}
+.scanning-date {
+    color: #222222;
+}
+/*
+Overview panel's styles
+*/
+.overview-panel {
+    /*inside border*/
+    /*variant*/background-color: #F9F9F9;
+    /*variant*/padding: 1em;
+    
+    /*outside border*/
+    /*variant*/margin-top: 1em;
+    /*variant*/margin-bottom: 1em;
+    /*variant*/box-shadow: 0px 0px 3px 3px #E7E7E7;
+}
+.overview-panel-title {
+    /*variant*/font-size: 2em;
+    font-weight: 600;
+    color: #3C3C3C;
+}
+/*
+https://developer.mozilla.org/en-US/docs/Web/CSS/display
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
+
+In the following example a ***container*** has been set to ***display: flex***, 
+which means that the three ***child items*** become ***flex items***. 
+The value of ***justify-content*** has been set to ***space-between*** 
+in order to space the items out ***evenly*** on the ***main axis***. 
+An equal amount of space is placed ***between each item*** 
+with the ***left(most) and right(most) items*** being flush with the edges of the flex container. 
+You can also see that the items are stretching on the ***cross axis***, 
+due to the default value of ***align-items*** being ***stretch***. 
+The items stretch to the height of the flex container, making them each appear as tall as the ***tallest item***.
+*/
+
+/*parent div as the flex container, child div(s) as the flex items*/
+.flex-container-space-between-flex-items {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-container-center-flex-item {
+    display: flex;
+    justify-content: center;
+}
+.flex-container {
+    display: flex;
+}
+.align-self-center {
+    align-self: center;
+}
+/*File info list styles*/
+.prepend-space:before {
+    content: "\00a0";
+}
+.add-underline {
+    text-decoration: underline;
+}
+.file-info-list-img {
+    margin-right: 1em;
+    align-self: center;
+}
+.file-info-list-head-text {
+    font-weight: 100;
+    color: #717171;
+    font-size: 1em;
+}
+.file-info-list-number {
+    color: #464646;
+    font-weight: 900;
+    text-decoration: underline;
+}
+.glyph-padding-left {
+    padding-left: 1em;
+}
+/*
+Image's styles
+*/
+.normal-img-height-width {
+    height: 16px;
+    width: 16px;
+}
+/*
+Line's styles
+*/
+.horizontal-line {
+    border-top: 3px solid #979797;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+.thin-horizontal-line {
+    border-top: 1px solid #DDDBDB;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.vertical-line {
+    border-left: 1px solid #DDDBDB;
+}
+/*
+Caption(Icon)Number's styles
+*/
+.badge-content {
+    cursor: pointer;
+    margin: auto;
+}
+.badge-caption {
+    font-size: 1.5em;
+    text-align: center;
+    color: #696969;
+}
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/align-self*/
+.badge-image {
+    height: 16px;
+    width: 16px;
+    align-self: center;
+    margin-right: 1em;
+}
+.badge-number {
+    font-size: 4em;
+    text-align: center;
+    color: #4A4A4A;
+    font-weight: 100;
+}
+.badge-number-orange {
+    color: #F5A623;
+}
+/*
+Duplication Ratio's styles
+*/
+.duplication-ratio-svg {
+    width: 300px;
+    height: 300px;
+    margin-top: 2em;
+}
+.duplication-ratio-stop1 {
+    stop-color: #464646;
+}
+.duplication-ratio-stop2 {
+    stop-color: darkgray;
+}
+.duplication-ratio-path {
+    fill: none;
+}
+.duplication-ratio-rest-path-color {
+    stroke: #EEEEEE;
+}
+.duplication-ratio-caption {
+    text-anchor: middle;
+    font-size: 1.2em;
+    color: #575757;
+}
+.duplication-ratio-percentage {
+    text-anchor: middle;
+    font-size: 4.5em;
+    color: #121111;
+    cursor: pointer;
+}
+
+/*Override bootstrap css*/
+/*https://react-bootstrap.github.io/utilities/custom-styles/*/
+.btn-transparent, .btn-transparent:hover, .btn-transparent:active, .btn-transparent:focus, .btn-group.open .btn-transparent {
+    color: black;
+    background-color: transparent;
+    border: none;
+    box-shadow: inset 0 0 0 transparent;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px black;
+}
+.panel-transparent {
+    color: black;
+    background-color: transparent;
+    border: none;
+    box-shadow: inset 0 0 0 transparent;
+    margin: 0;
+}
+.panel-heading {
+    padding: 5px;
+}
+.list-group-margin {
+    margin: 0;
+}
+.list-group-item-transparent {
+    border: none;
+    background-color: transparent;
+    padding: 0.5em;
+    padding-left: 3em;
+    color: #4B4B4B;
+    font-size: 1em;
+    font-weight: 100;
+}
+.panel-body {
+    padding: 0;
+}
+/*Tooltip's styles*/
+.tooltip-inner {
+    color: #888888;
+    text-align: left;
+    background-color: #FDFDFD;
+    box-shadow: 0px 0px 3px 3px #E7E7E7;
+}
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #FDFDFD;
+}
+/*Dropdown menu*/
+.dropdown-menu > li > a {
+    color: #090909;
+    font-weight: 100;
+    font-size: 1em;
+}
+
+/*font face: artifakt element*/
+/*  
+"Artifakt Element" definitions.
+These definitions are for the "Artifakt Element" series of font faces.
+ */
+ @font-face{
+    font-family:'Artifakt Element';
+        src:url('fontfiles/artifakt-element-light.eot?#iefix');
+        src:url('fontfiles/artifakt-element-light.eot?#iefix') format('eot'),
+        url('fontfiles/artifakt-element-light.woff2') format('woff2'),
+        url('fontfiles/artifakt-element-light.woff') format('woff'),
+        url('fontfiles/artifakt-element-light.ttf') format('truetype'),
+        url('fontfiles/artifakt-element-light.svg#ArtifaktElementLight') format('svg');
+    font-weight: 300;
+}
+
+@font-face{
+    font-family:'Artifakt Element';
+        src:url('fontfiles/artifakt-element-regular.eot?#iefix');
+        src:url('fontfiles/artifakt-element-regular.eot?#iefix') format('eot'),
+        url('fontfiles/artifakt-element-regular.woff2') format('woff2'),
+        url('fontfiles/artifakt-element-regular.woff') format('woff'),
+        url('fontfiles/artifakt-element-regular.ttf') format('truetype'),
+        url('fontfiles/artifakt-element-regular.svg#ArtifaktElementRegular') format('svg');
+    font-weight: 400;
+}
+
+@font-face{
+    font-family:'Artifakt Element';
+        src:url('fontfiles/artifakt-element-medium.eot?#iefix');
+        src:url('fontfiles/artifakt-element-medium.eot?#iefix') format('eot'),
+        url('fontfiles/artifakt-element-medium.woff2') format('woff2'),
+        url('fontfiles/artifakt-element-medium.woff') format('woff'),
+        url('fontfiles/artifakt-element-medium.ttf') format('truetype'),
+        url('fontfiles/artifakt-element-medium.svg#ArtifaktElementMedium') format('svg');
+    font-weight: 700;
+}
+
+@font-face{
+    font-family:'Artifakt Element';
+        src:url('fontfiles/artifakt-element-italic.eot?#iefix');
+        src:url('fontfiles/artifakt-element-italic.eot?#iefix') format('eot'),
+        url('fontfiles/artifakt-element-italic.woff2') format('woff2'),
+        url('fontfiles/artifakt-element-italic.woff') format('woff'),
+        url('fontfiles/artifakt-element-italic.ttf') format('truetype'),
+        url('fontfiles/artifakt-element-italic.svg#ArtifaktElementItalic') format('svg');
+    font-style: italic;
+    font-weight: 400;
+}
